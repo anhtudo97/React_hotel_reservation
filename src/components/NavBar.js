@@ -15,8 +15,8 @@ export default class componentName extends Component {
   render() {
     return (
       <nav className="navbar">
-        <div class="nav-center">
-          <div class="nav-header">
+        <div className="nav-center">
+          <div className="nav-header">
             <Link to="/">
               <img src={logo} alt="Beach Resort" />
             </Link>
