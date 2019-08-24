@@ -25,9 +25,10 @@ class RoomProvider extends Component {
   getData = async () => {
     try {
       let response = await Client.getEntries({
-        content_type: "beachResortRoom",
-        order:"sys.createdAt"
+        content_type: "beachResortRoom"
       });
+
+      console.log(response.items);
 
       let rooms = this.formatData(response.items);
 
@@ -69,7 +70,7 @@ class RoomProvider extends Component {
   }
 
   formatData(items) {
-    let tempItems = items.map((item, i) => {
+    let tempItems = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
       let room = { ...item.fields, images, id };
