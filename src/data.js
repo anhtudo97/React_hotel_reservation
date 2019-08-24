@@ -444,7 +444,7 @@ export default [
         {
           fields: {
             file: {
-              url: img8
+              // url: img8
             }
           }
         },
